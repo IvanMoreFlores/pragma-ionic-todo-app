@@ -2,12 +2,12 @@
 
 ## 🚀 Setup
 1. `npm install`
-2. `ionic cordova platform add android`
-3. `ionic cordova run android`
+2. `npx cap add android`
+3. `npx cap add ios`
 
 ## 📱 Compilación Android/iOS
-- Android: `ionic cordova build android`
-- iOS: `ionic cordova build ios`
+- Android: `npx apen android`
+- iOS: `npx apen ios`
 
 ## ☁️ Firebase
 - Configura Firebase en `/environments/environment.ts`
