@@ -5,14 +5,55 @@ import { TaskService } from '../../services/task.service';
 import { CategoryService } from '../../services/category.service';
 import { RemoteConfigService } from '../../services/remote-config.service';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import {
+  IonButton,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonFooter,
+  IonInput,
+  IonContent,
+  IonRow,
+  IonCol,
+  IonSegmentButton,
+  IonLabel,
+  IonList,
+  IonItemSliding,
+  IonItem,
+  IonCheckbox,
+  IonItemOptions,
+  IonItemOption,
+  IonButtons,
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, IonicModule, FormsModule, RouterModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    RouterModule,
+    IonButton,
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonFooter,
+    IonInput,
+    IonContent,
+    IonRow,
+    IonCol,
+    IonSegmentButton,
+    IonLabel,
+    IonList,
+    IonItemSliding,
+    IonItem,
+    IonCheckbox,
+    IonItemOptions,
+    IonItemOption,
+    IonButtons,
+  ],
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
 })
@@ -57,7 +98,9 @@ export class HomePage implements OnInit {
   async toggleComplete(taskId: string) {
     const task = await this.taskService.getTaskById(taskId);
     if (task) {
-      this.taskService.updateTaskPartial(taskId, { completed: !task.completed });
+      this.taskService.updateTaskPartial(taskId, {
+        completed: !task.completed,
+      });
       this.loadData();
     }
   }
