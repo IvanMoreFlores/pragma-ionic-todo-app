@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBa9AnF_NPYe0RyPbhnCf0k06W45SNZkNo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>344735978238</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.pragma.ionic.iOS</string>
+	<key>PROJECT_ID</key>
+	<string>pragma-ionic</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pragma-ionic.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:344735978238:ios:88c66055eaa9251bad8baf</string>
+</dict>
+</plist>

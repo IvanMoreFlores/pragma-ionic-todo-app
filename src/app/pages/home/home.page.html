@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>To-Do List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-input placeholder="Nueva tarea" [(ngModel)]="newTaskTitle"></ion-input>
+    <ion-button (click)="addTask()">Agregar</ion-button>
+  </ion-item>
+
+  <ion-segment *ngIf="showCategories" [(ngModel)]="selectedCategoryId"
+    (ionChange)="filterByCategory(selectedCategoryId)">
+    <ion-segment-button value="">
+      <ion-label>Todos</ion-label>
+    </ion-segment-button>
+    <ion-segment-button *ngFor="let cat of categories" [value]="cat.id">
+      <ion-label>{{ cat.name }}</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let task of filteredTasks">
+      <ion-item>
+        <ion-label [class.completed]="task.completed">{{ task.title }}</ion-label>
+        <ion-checkbox slot="end" [checked]="task.completed" (ionChange)="toggleComplete(task.id)"></ion-checkbox>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="deleteTask(task.id)">Eliminar</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <a [routerLink]="['/categories']" class="footer-link">Ir a Categorías</a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

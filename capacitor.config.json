@@ -1,0 +1,6 @@
+{
+  "appId": "com.pragma.ionic",
+  "appName": "Ionic Todo App",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
